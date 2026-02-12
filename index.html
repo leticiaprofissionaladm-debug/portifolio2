@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Profissional</title>
+
+<!-- ÍCONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER + FOTO */
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+/* MENU */
+nav {
+  background: #111827;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #374151;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #4b5563;
+  transform: scale(1.05);
+}
+
+/* CAPA */
+header {
+  background: linear-gradient(135deg, #c724bc, #e0d3e0);
+  color: white;
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* SEÇÕES */
+section {
+  display: none;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(221, 40, 40, 0.1);
+  animation: slideIn 0.6s ease forwards;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* PROJETOS */
+.projeto {
+  padding: 15px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: white;
+  margin-top: 200px;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CAPA -->
+<header class="perfil">
+  
+  <img src="imagens/foto.png" alt="Foto de Leticia" class="foto-perfil">
+
+  <div>
+    <h1>Leticia Alves</h1>
+    <p>Desenvolvedora Full Stack</p>
+  </div>
+</header>
+
+<!-- MENU -->
+<nav>
+  <button onclick="mostrarSecao('sobre')">Sobre</button>
+  <button onclick="mostrarSecao('habilidades')">Habilidades</button>
+  <button onclick="mostrarSecao('projetos')">Projetos</button>
+  <button onclick="mostrarSecao('contato')">Contato</button>
+</nav>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <h2>Sobre Mim</h2>
+  <p>
+    Sou desenvolvedora web com experiência na criação de sites e sistemas completos,
+    atuando tanto no front-end quanto no back-end. Desenvolvo soluções modernas,
+    rápidas e responsivas, sempre focadas em desempenho, usabilidade e qualidade.
+  </p>
+
+  <p>
+    <strong>Curso:</strong> Desenvolvedora Full Stack<br>
+    <strong>Curso:</strong> Técnica em Administração<br>
+    <strong>Faculdade:</strong> Análise e Desenvolvimento de Sistemas - UVA<br>
+    <strong>Experiência:</strong> Departamento de Ciências Radiológicas - Jovem Aprendiz
+  </p>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades">
+  <h2>Minhas Habilidades</h2>
+  <div class="cards">
+    <div class="card">JavaScript</div>
+    <div class="card">Front-end</div>
+    <div class="card">Back-end</div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <h2>Projetos</h2>
+  <div class="projeto">Projeto 1 – </div>
+  <div class="projeto">Projeto 2 – </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <h2>Contato</h2>
+
+  <p>
+    <i class="fa-solid fa-envelope"></i>
+    leticia.profissional.adm@gmail.com
+  </p>
+
+  <p>
+    <i class="fa-brands fa-whatsapp"></i>
+    (21) 96925-2477
+  </p>
+
+  <p>
+    <i class="fa-brands fa-github"></i>
+    github.com/leticiaalves
+  </p>
+
+  <p>
+    <i class="fa-brands fa-linkedin"></i>
+    linkedin.com/in/leticia-alves-9b8a1a1b2
+  </p>
+
+  <strong>Currículo:</strong><br>
+  <a href="curriculo.pdf" download>Baixar Currículo</a>
+</section>
+
+<footer>
+  <p>&copy; Leticia Alves</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function mostrarSecao(id) {
+  const secoes = document.querySelectorAll('section');
+  secoes.forEach(secao => secao.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+mostrarSecao('sobre');
+</script>
+
+</body>
+</html>
